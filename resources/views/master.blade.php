@@ -725,10 +725,12 @@
 
       <!-- Default box -->
       <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
+        {{-- <div class="card-header"> --}}
+          {{-- <h3 class="card-title">Title</h3> --}}
 
-          <div class="card-tools">
+          @yield('content')
+
+          {{-- <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
               <i class="fas fa-minus"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
@@ -737,11 +739,11 @@
         </div>
         <div class="card-body">
           Start creating your amazing application!
-        </div>
+        </div> --}}
         <!-- /.card-body -->
-        <div class="card-footer">
+        {{-- <div class="card-footer">
           Footer
-        </div>
+        </div> --}}
         <!-- /.card-footer-->
       </div>
       <!-- /.card -->
@@ -768,6 +770,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
+
 <script src="{{ asset('AdminLTE/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -775,5 +778,6 @@
 <script src="{{ asset('AdminLTE/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('AdminLTE/dist/js/demo.js')}}"></script>
+@stack('script')
 </body>
 </html>
